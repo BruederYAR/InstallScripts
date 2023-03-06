@@ -1,0 +1,40 @@
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Привязка рабочих столов к монитору(ам)
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+# Рамки и отступы
+bspc config border_width         2
+bspc config window_gap          12
+
+# Цвет рамки
+bspc config normal_border_color "#0A1F32"
+bspc config active_border_color "#2D384A"
+bspc config focused_border_color "#344756"
+
+# Цвет пространства при выборе положения нового окна
+bspc config presel_feedback_color "#595B82"
+
+# Фокус окна наведение курсора
+bspc config focus_follows_pointer true
+bspc config pointer_modifier	super
+
+# Коэффициент разделение. Сколько процентов останется от родительского окна при открытии нового
+bspc config split_ratio          0.52
+
+# Отступы и рамки, когда открыто одно окно
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+#bspc config paddingless_monocle	 true
+
+# Схема открытия нового окна
+#bspc config automatic_scheme	spiral
+
+# Правила приложений
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a qutebrowser desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+$HOME/.config/polybar/launch.sh
