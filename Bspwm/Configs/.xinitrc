@@ -32,7 +32,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-
-picom -f & 						
-xsetroot -cursor_name left_prt 	
+xsetroot -cursor_name left_ptr
+setxkbmap -options grp:alt_shift_toggle us,ru &
+picom -f & 						 	
 exec bspwm 	
