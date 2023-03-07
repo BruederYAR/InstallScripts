@@ -1,3 +1,5 @@
+#!/bin/sh
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Привязка рабочих столов к монитору(ам)

@@ -50,11 +50,13 @@ InstallBetterlockscreen(){
 }
 
 CopyConfigs() {
-    cp -rf ./Configs/.config ~/
+    mkdir -p ~/.config
+    cp -rf ./Configs/.config/. ~/.config
     cp -rf ./Configs/.xinitrc ~/
 }
 
 MakeExecutable() {
+    chmod +x ~/.config/bspwm/bspwmrc
     chmod +x ~/.config/polybar/launch.sh
     chmod +x ~/.config/polybar/launch_additional.sh
 }

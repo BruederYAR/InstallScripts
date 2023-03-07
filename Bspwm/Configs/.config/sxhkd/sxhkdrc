@@ -6,7 +6,7 @@ super + Return
 super + b
 	qutebrowser
 # Лаунчер dmenu
-super + d
+super + @space
 	dmenu_run
 # Базовый бар
 super + F1
