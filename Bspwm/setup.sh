@@ -39,7 +39,7 @@ InstallYay(){
     echo "Install yay..."
     git clone https://aur.archlinux.org/yay.git 
     cd ./yay || exit
-    makepkg -sir
+    makepkg -sir --noconfirm
     cd ..
     rm -rf yay
 }

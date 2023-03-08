@@ -15,7 +15,7 @@ super + F1
 super + F2
 	$HOME/.config/polybar/launch_additional.sh
 # Экран блокировки
-alt + shift + x
+control + shift + z
     betterlockscreen -l blur
 	
 ################## BSPWM/SXHKD ##################
