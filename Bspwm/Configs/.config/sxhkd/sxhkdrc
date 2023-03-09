@@ -57,10 +57,10 @@ super + {_,shift + }{h,j,k,l}
 # Фокус узлов в другой путь(workspace)
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
-# Фокус на следующее/привидущее окно в текущем рабочем столе
+# Фокус на следующее/предыдущий  окно в текущем рабочем столе
 super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
-# Фокус на следующий/привидущий рабочий стол в текущем мониторе
+# Фокус на следующий/предыдущий  рабочий стол в текущем мониторе
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 # Фокус на последний узел/рабочий стол
